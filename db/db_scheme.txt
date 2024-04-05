@@ -1,0 +1,51 @@
+DB: spotify
+
+1) albums
+    id: int (PK),
+    spotify_id: string(22),
+    name: string,
+    release_date: date,
+    genres: string/list,
+    label: string,
+    total_tracks: int
+
+2) artists
+    id: int (PK),
+    spotify_id: string(22),
+    name: string,
+    genres: string
+
+3) albums_artists
+    album_id: int (FK),
+    artist_id: int (FK)
+
+4) tracks
+    id: string,
+    name: string,
+    album_id: string (FK),
+    duration_ms: int,
+    explicit: bool
+
+5) tracks_artists
+
+6) albums_popularity
+    album_id: string (FK),
+    popularity: int
+
+7) artists_popularity
+    artist_id: string (FK),
+    popularity: int
+
+8) tracks_popularity
+    track_id: string (FK),
+    popularity: int
+
+9) artists_followers
+    artist_id: string (FK),
+    dt: date,
+    followers: int
+
+TBD:
+1) my_top_artists
+2) my_top_tracks
+3) created_playlists

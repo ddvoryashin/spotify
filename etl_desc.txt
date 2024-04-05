@@ -1,0 +1,13 @@
+1) get_album_releases: Get ids of lately released albums;
+2) get_albums: Get info about new albums;
+3) get_artists: Get info about new artists;
+4) get_tracks: Get info about new tracks;
+5) update_albums: Update info about all albums in table;
+6) update_artists: Update info about all artists in table;
+7) update_tracks: Update info about all tracks in table.
+
+DAG load_releases (daily):
+get_album_releases -> get_albums -> [get_artists, get_tracks]
+
+DAG update data (daily):
+[update_albums, update_artists, update_tracks]
