@@ -1,9 +1,6 @@
 import warnings
 from get_token import *
-from get_albums_releases import *
-from get_several_albums import *
-from get_several_artists import *
-from get_several_tracks import *
+from get_spotify import *
 
 warnings.filterwarnings('ignore')
 
