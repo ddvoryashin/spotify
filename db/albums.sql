@@ -1,7 +1,7 @@
 CREATE TABLE albums
 (
     id              SERIAL,
-    spotify_id      VARCHAR(22),
+    spotify_id      VARCHAR(22) UNIQUE,
     name            VARCHAR(256),
     release_date    DATE,
     genres          VARCHAR(256),
